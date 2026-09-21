@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 스타일 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <!-- 상단 수식 및 결과 디스플레이 -->
+        <div class="display-container">
+            <div class="formula" id="formula"></div>
+            <input type="text" class="display" id="display" readonly value="0">
+        </div>
+        
+        <!-- 버튼 배열 -->
+        <div class="buttons">
+            <!-- 윈도우 계산기 상단 특수 기능 -->
+            <button class="btn-func" onclick="clearDisplay()">CE</button>
+            <button class="btn-func" onclick="clearAll()">C</button>
+            <button class="btn-func" onclick="deleteLast()">⌫</button>
+            <button class="btn-op" onclick="setOperator('/')">÷</button>
+
+            <button class="btn-func" onclick="fraction()">1/x</button>
+            <button class="btn-func" onclick="square()">x²</button>
+            <button class="btn-func" onclick="sqrt()">√x</button>
+            <button class="btn-op" onclick="setOperator('*')">×</button>
+
+            <!-- 숫자 및 사칙연산 -->
+            <button class="btn-num" onclick="appendNumber('7')">7</button>
+            <button class="btn-num" onclick="appendNumber('8')">8</button>
+            <button class="btn-num" onclick="appendNumber('9')">9</button>
+            <button class="btn-op" onclick="setOperator('-')">-</button>
+
+            <button class="btn-num" onclick="appendNumber('4')">4</button>
+            <button class="btn-num" onclick="appendNumber('5')">5</button>
+            <button class="btn-num" onclick="appendNumber('6')">6</button>
+            <button class="btn-op" onclick="setOperator('+')">+</button>
+
+            <button class="btn-num" onclick="appendNumber('1')">1</button>
+            <button class="btn-num" onclick="appendNumber('2')">2</button>
+            <button class="btn-num" onclick="appendNumber('3')">3</button>
+            <button class="btn-op btn-equal" onclick="calculate()">=</button>
+
+            <button class="btn-func" onclick="toggleSign()">+/-</button>
+            <button class="btn-num" onclick="appendNumber('0')">0</button>
+            <button class="btn-num" onclick="appendDot()">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

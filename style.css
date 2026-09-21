@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #202020;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* 디스플레이 영역 */
+.display-container {
+    padding: 20px 14px;
+    text-align: right;
+    background-color: #202020;
+}
+
+.formula {
+    height: 20px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.display {
+    width: 100%;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: right;
+    outline: none;
+}
+
+/* 버튼 그리드 레이아웃 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px; /* 윈도우 계산기 특유의 얇은 경계선 표현 */
+}
+
+button {
+    height: 50px;
+    border: none;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+/* 숫자 버튼 */
+.btn-num {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    font-weight: bold;
+}
+.btn-num:hover {
+    background-color: #323232;
+}
+
+/* 일반 기능 버튼 */
+.btn-func {
+    background-color: #323232;
+    color: #ffffff;
+}
+.btn-func:hover {
+    background-color: #3b3b3b;
+}
+
+/* 우측 연산자 버튼 */
+.btn-op {
+    background-color: #323232;
+    color: #ffffff;
+}
+.btn-op:hover {
+    background-color: #3b3b3b;
+}
+
+/* 윈도우 특유의 강조색(= 버튼) */
+.btn-equal {
+    background-color: #4cc2ff;
+    color: #000000;
+    grid-row: span 2; /* 높이를 2칸으로 확장 */
+    height: 102px;
+}
+.btn-equal:hover {
+    background-color: #00a3f5;
+}
